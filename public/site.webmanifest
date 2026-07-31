@@ -1,0 +1,11 @@
+{
+  "name": "Yehidat",
+  "short_name": "Yehidat",
+  "icons": [
+    { "src": "/icon_dark_192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon_dark_512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#7a5a12",
+  "background_color": "#d7dbe0",
+  "display": "standalone"
+}

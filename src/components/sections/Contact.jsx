@@ -32,7 +32,7 @@ async function submitCallback(payload) {
 function ChannelCard({ icon, label, value, href, external }) {
   const inner = (
     <div className="flex items-center gap-3 px-4 py-4 bg-parchment border border-gold-edge/25 rounded-xl transition-all duration-150 hover:border-gold-edge hover:shadow-[0_0_0_3px_#FFF8DC]">
-      <div className="w-11 h-11 rounded-lg bg-gold-pale flex items-center justify-center text-xl flex-shrink-0">
+      <div className="w-11 h-11 rounded-lg bg-gold-pale flex items-center justify-center text-xl shrink-0">
         {icon}
       </div>
       <div>
@@ -40,7 +40,7 @@ function ChannelCard({ icon, label, value, href, external }) {
         <p className="text-sm font-semibold text-ink">{value}</p>
       </div>
     </div>
-  )
+  );
   if (!href) return <div>{inner}</div>
   return (
     <a href={href} target={external ? '_blank' : undefined} rel={external ? 'noopener noreferrer' : undefined}>

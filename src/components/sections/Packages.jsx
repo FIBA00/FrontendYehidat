@@ -19,35 +19,50 @@ function PackageCard({ pkg, delay }) {
       delay={delay}
       className={`relative rounded-2xl p-8 transition-transform duration-200 hover:-translate-y-1 ${
         pkg.featured
-          ? 'bg-ink text-parchment border border-gold-edge/55'
-          : 'bg-parchment ribbon-border'
+          ? "bg-ink text-parchment border border-gold-edge/55"
+          : "bg-parchment ribbon-border"
       }`}
     >
       {pkg.featured && (
         <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold text-ink text-[11px] font-bold tracking-wider uppercase px-4 py-1 rounded-full whitespace-nowrap">
-          {t('packages.mostPopular')}
+          {t("packages.mostPopular")}
         </div>
       )}
 
-      <p className={`font-display font-bold text-lg mb-1 ${pkg.featured ? 'text-gold' : 'text-ink'}`}>
+      <p
+        className={`font-display font-bold text-lg mb-1 ${pkg.featured ? "text-gold" : "text-ink"}`}
+      >
         {t(`packages.${pkg.id}.name`)}
       </p>
 
       <div className="flex items-baseline gap-1 mb-2">
-        <span className={`text-sm font-semibold ${pkg.featured ? 'text-gold' : 'text-gold-deep'}`}>ETB</span>
-        <span className={`font-display font-bold leading-none text-4xl ${pkg.featured ? 'text-gold' : 'text-ink'}`}>
+        <span
+          className={`text-sm font-semibold ${pkg.featured ? "text-gold" : "text-gold-deep"}`}
+        >
+          ETB
+        </span>
+        <span
+          className={`font-display font-bold leading-none text-4xl ${pkg.featured ? "text-gold" : "text-ink"}`}
+        >
           {pkg.price.toLocaleString()}
         </span>
       </div>
 
-      <p className={`text-sm mb-6 leading-relaxed ${pkg.featured ? 'text-parchment/70' : 'text-ink-muted'}`}>
+      <p
+        className={`text-sm mb-6 leading-relaxed ${pkg.featured ? "text-parchment/70" : "text-ink-muted"}`}
+      >
         {t(`packages.${pkg.id}.description`)}
       </p>
 
       <ul className="flex flex-col gap-2.5 mb-7">
         {items.map((item) => (
-          <li key={item} className={`flex items-start gap-2.5 text-sm ${pkg.featured ? 'text-parchment/75' : 'text-ink-soft'}`}>
-            <span className={`mt-1.5 w-1.5 h-1.5 min-w-[6px] rounded-full ${pkg.featured ? 'bg-gold' : 'bg-gold-deep'}`} />
+          <li
+            key={item}
+            className={`flex items-start gap-2.5 text-sm ${pkg.featured ? "text-parchment/75" : "text-ink-soft"}`}
+          >
+            <span
+              className={`mt-1.5 w-1.5 h-1.5 min-w-1.5 rounded-full ${pkg.featured ? "bg-gold" : "bg-gold-deep"}`}
+            />
             {item}
           </li>
         ))}
@@ -55,16 +70,18 @@ function PackageCard({ pkg, delay }) {
 
       <button
         onClick={handleSelect}
-        className={`w-full justify-center ${pkg.featured ? 'btn-gold' : 'btn-outline'}`}
+        className={`w-full justify-center ${pkg.featured ? "btn-gold" : "btn-outline"}`}
       >
-        {t('packages.getStarted')}
+        {t("packages.getStarted")}
       </button>
 
-      <p className={`text-center text-[11px] mt-3 ${pkg.featured ? 'text-parchment/40' : 'text-ink-muted'}`}>
-        {t('packages.depositNote', { amount: pkg.deposit.toLocaleString() })}
+      <p
+        className={`text-center text-[11px] mt-3 ${pkg.featured ? "text-parchment/40" : "text-ink-muted"}`}
+      >
+        {t("packages.depositNote", { amount: pkg.deposit.toLocaleString() })}
       </p>
     </Reveal>
-  )
+  );
 }
 
 export default function Packages() {

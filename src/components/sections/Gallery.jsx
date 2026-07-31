@@ -34,16 +34,19 @@ export default function Gallery() {
           {GALLERY_ITEMS.map((item, i) => {
             const colSpan = i === 0 ? 'md:col-span-6 md:row-span-2' : 'md:col-span-3 md:row-span-1'
             return (
-              <div key={item.id} className={`rounded-2xl overflow-hidden ${colSpan}`}>
+              <div
+                key={item.id}
+                className={`rounded-2xl overflow-hidden ${colSpan}`}
+              >
                 <ImagePlaceholder
                   src={item.src}
                   alt={item.alt}
                   type={item.type}
                   hint={HINTS[i]}
-                  className="w-full h-full min-h-[160px]"
+                  className="w-full h-full min-h-40"
                 />
               </div>
-            )
+            );
           })}
         </Reveal>
 

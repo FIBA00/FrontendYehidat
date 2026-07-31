@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Inter:wght@300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Inter:wght@300;400;500;600&display=swap");
 @import "tailwindcss";
 
 /* ═══════════════════════════════════════════════════
@@ -6,28 +6,35 @@
    These become utilities automatically: bg-gold, text-ink, font-display, etc.
 ═══════════════════════════════════════════════════ */
 @theme {
-  --color-gold:        #F5C518;
-  --color-gold-deep:   #B8960C;
-  --color-gold-edge:   #D4A017;
-  --color-gold-pale:   #FFF8DC;
-  --color-gold-cream:  #FFF3CC;
+  --color-gold: #f5c518;
+  --color-gold-deep: #b8960c;
+  --color-gold-edge: #d4a017;
 
-  --color-ink:         #1A1400;
-  --color-ink-soft:    #4A3F0A;
-  --color-ink-muted:   #7A6B2A;
+  /* --color-gold-pale:   #FFF8DC; */
+  /* --color-gold-cream:  #FFF3CC; */
+  --color-gold-pale: #0f0f13;
+  --color-gold-cream: #17181d;
 
-  --color-parchment:   #FFFDF5;
+  --color-ink: #ffffff;
+  --color-ink-soft: #f5c518;
+  --color-ink-muted: #7a6b2a;
+
+  /* --color-parchment:   #FFFDF5; */
+  --color-parchment: #241f14;
 
   --font-display: "Playfair Display", Georgia, serif;
-  --font-body:    "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
 
-  --shadow-gold:    0 0 0 1px rgba(184,150,12,0.25), 0 4px 24px rgba(245,197,24,0.15);
-  --shadow-gold-lg: 0 0 0 4px #FFF8DC, 0 0 0 5.5px rgba(184,150,12,0.55);
-  --shadow-card:    0 2px 16px rgba(26,20,0,0.08);
+  --shadow-gold:
+    0 0 0 1px rgba(184, 150, 12, 0.25), 0 4px 24px rgba(245, 197, 24, 0.15);
+  --shadow-gold-lg: 0 0 0 4px #fff8dc, 0 0 0 5.5px rgba(184, 150, 12, 0.55);
+  --shadow-card: 0 2px 16px rgba(26, 20, 0, 0.08);
 }
 
 @layer base {
-  html { scroll-behavior: smooth; }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     font-family: var(--font-body);
     background-color: var(--color-parchment);
@@ -40,7 +47,10 @@
   .ribbon-border {
     border-radius: 1rem;
     border: 1.5px solid var(--color-gold-edge);
-    box-shadow: 0 0 0 4px var(--color-gold-pale), 0 0 0 5.5px rgba(184,150,12,0.55), var(--shadow-card);
+    box-shadow:
+      0 0 0 4px var(--color-gold-pale),
+      0 0 0 5.5px rgba(184, 150, 12, 0.55),
+      var(--shadow-card);
   }
 
   .btn-gold {
@@ -54,12 +64,12 @@
     font-weight: 600;
     font-size: 0.875rem;
     transition: all 0.2s;
-    box-shadow: 0 4px 20px rgba(245,197,24,0.45);
+    box-shadow: 0 4px 20px rgba(245, 197, 24, 0.45);
   }
   .btn-gold:hover {
     transform: translateY(-2px);
     background: #f0c000;
-    box-shadow: 0 6px 28px rgba(245,197,24,0.55);
+    box-shadow: 0 6px 28px rgba(245, 197, 24, 0.55);
   }
 
   .btn-outline {
@@ -85,12 +95,12 @@
     gap: 0.5rem;
     padding: 0.875rem 1.75rem;
     border-radius: 9999px;
-    background: #25D366;
+    background: #25d366;
     color: white;
     font-weight: 600;
     font-size: 0.875rem;
     transition: all 0.2s;
-    box-shadow: 0 4px 20px rgba(37,211,102,0.35);
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
   }
   .btn-whatsapp:hover {
     transform: translateY(-2px);
@@ -135,7 +145,11 @@
     text-align: center;
     border: 1.5px dashed var(--color-gold-edge);
     border-radius: 0.75rem;
-    background: linear-gradient(135deg, var(--color-gold-cream) 0%, var(--color-gold-pale) 100%);
+    background: linear-gradient(
+      135deg,
+      var(--color-gold-cream) 0%,
+      var(--color-gold-pale) 100%
+    );
     padding: 1rem;
   }
 }

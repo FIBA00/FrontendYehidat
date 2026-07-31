@@ -7,12 +7,12 @@
 // ─────────────────────────────────────────────────────────────
 
 export const CONTACT = {
-  PHONE_RAW: '+251912345678',
-  PHONE_DISPLAY: '+251 91 234 5678',
-  WHATSAPP_NUMBER: '251912345678',
-  EMAIL: 'hello@yehidat.com',
-  LOCATION: 'Addis Ababa, Ethiopia',
-}
+  PHONE_RAW: "+251968034000",
+  PHONE_DISPLAY: "+251 96 80 34 000",
+  WHATSAPP_NUMBER: "251968034000",
+  EMAIL: "hawig74@gmail.com",
+  LOCATION: "Dukem/Bishoftu, Addis Ababa, Ethiopia",
+};
 
 export const SOCIAL = {
   INSTAGRAM: '#',
@@ -42,13 +42,37 @@ export const OCCASIONS = [
 // ── GALLERY ──────────────────────────────────────────────────
 // Replace src with real image/video paths.
 // e.g. import g1 from '../assets/images/gallery-1.jpg' then src: g1
+
+import cake from "../assets/images/hero_cake.JPG";
+import hbd from "../assets/images/hero_banner.JPG";
+import suprise_2 from "../assets/images/suprise_2.JPG";
+
+
 export const GALLERY_ITEMS = [
-  { id: 1, type: 'image', src: null, alt: 'Birthday surprise setup', large: true },
-  { id: 2, type: 'image', src: null, alt: 'Flower arrangement',       large: false },
-  { id: 3, type: 'image', src: null, alt: 'Cake decoration',          large: false },
-  { id: 4, type: 'image', src: null, alt: 'Anniversary decoration',   large: false },
-  { id: 5, type: 'image', src: null, alt: 'Balloon setup',            large: false },
-]
+  {
+    id: 1,
+    type: "image",
+    src: hbd,
+    alt: "Birthday surprise setup",
+    large: true,
+  },
+  {
+    id: 2,
+    type: "image",
+    src: suprise_2,
+    alt: "Flower arrangement",
+    large: false,
+  },
+  { id: 3, type: "image", src: cake, alt: "Cake decoration", large: false },
+  {
+    id: 4,
+    type: "image",
+    src: null,
+    alt: "Anniversary decoration",
+    large: false,
+  },
+  { id: 5, type: "image", src: null, alt: "Balloon setup", large: false },
+];
 
 // Replace with real face image paths (64×64px circular portraits)
 export const TRUST_FACES = [null, null, null]

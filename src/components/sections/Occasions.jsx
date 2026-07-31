@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { OCCASIONS } from '../../data/constants'
+import { OCCASIONS } from "../../data/constants.js";
 import { useAppStore } from '../../store/useAppStore'
 import Reveal from '../ui/Reveal'
 
