@@ -1,111 +1,141 @@
-:root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+/* ═══════════════════════════════════════════════════
+   THEME — Tailwind v4 CSS-first config.
+   These become utilities automatically: bg-gold, text-ink, font-display, etc.
+═══════════════════════════════════════════════════ */
+@theme {
+  --color-gold:        #F5C518;
+  --color-gold-deep:   #B8960C;
+  --color-gold-edge:   #D4A017;
+  --color-gold-pale:   #FFF8DC;
+  --color-gold-cream:  #FFF3CC;
 
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --color-ink:         #1A1400;
+  --color-ink-soft:    #4A3F0A;
+  --color-ink-muted:   #7A6B2A;
 
-  @media (max-width: 1024px) {
-    font-size: 16px;
+  --color-parchment:   #FFFDF5;
+
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body:    "Inter", system-ui, sans-serif;
+
+  --shadow-gold:    0 0 0 1px rgba(184,150,12,0.25), 0 4px 24px rgba(245,197,24,0.15);
+  --shadow-gold-lg: 0 0 0 4px #FFF8DC, 0 0 0 5.5px rgba(184,150,12,0.55);
+  --shadow-card:    0 2px 16px rgba(26,20,0,0.08);
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-parchment);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+@layer components {
+  .ribbon-border {
+    border-radius: 1rem;
+    border: 1.5px solid var(--color-gold-edge);
+    box-shadow: 0 0 0 4px var(--color-gold-pale), 0 0 0 5.5px rgba(184,150,12,0.55), var(--shadow-card);
   }
 
-  #social .button-icon {
-    filter: invert(1) brightness(2);
+  .btn-gold {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.75rem;
+    border-radius: 9999px;
+    background: var(--color-gold);
+    color: var(--color-ink);
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+    box-shadow: 0 4px 20px rgba(245,197,24,0.45);
   }
-}
-
-body {
-  margin: 0;
-}
-
-#root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-}
-
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
-}
-
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
+  .btn-gold:hover {
+    transform: translateY(-2px);
+    background: #f0c000;
+    box-shadow: 0 6px 28px rgba(245,197,24,0.55);
   }
-}
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
+
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.75rem;
+    border-radius: 9999px;
+    border: 1.5px solid var(--color-gold-edge);
+    color: var(--color-ink);
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: all 0.2s;
   }
-}
-p {
-  margin: 0;
-}
+  .btn-outline:hover {
+    transform: translateY(-2px);
+    background: var(--color-gold-pale);
+  }
 
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
-}
+  .btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.75rem;
+    border-radius: 9999px;
+    background: #25D366;
+    color: white;
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.35);
+  }
+  .btn-whatsapp:hover {
+    transform: translateY(-2px);
+    background: #20bc5a;
+  }
 
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
+  .eyebrow {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-gold-deep);
+    margin-bottom: 0.75rem;
+  }
+
+  .section-heading {
+    font-family: var(--font-display);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-ink);
+    font-size: clamp(1.7rem, 3.5vw, 2.6rem);
+  }
+
+  .display-heading {
+    font-family: var(--font-display);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--color-ink);
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+  }
+
+  .img-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--color-ink-muted);
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-align: center;
+    border: 1.5px dashed var(--color-gold-edge);
+    border-radius: 0.75rem;
+    background: linear-gradient(135deg, var(--color-gold-cream) 0%, var(--color-gold-pale) 100%);
+    padding: 1rem;
+  }
 }

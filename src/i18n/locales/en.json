@@ -1,0 +1,120 @@
+{
+  "nav": {
+    "occasions": "Occasions",
+    "how": "How it works",
+    "packages": "Packages",
+    "gallery": "Gallery",
+    "cta": "Plan a Surprise"
+  },
+  "hero": {
+    "tag": "Addis Ababa's Surprise Specialists",
+    "titleLine1": "Surprises that make them",
+    "titleEmphasis": "cry happy tears",
+    "subtitle": "You tell us who to surprise and when. We handle every detail — flowers, cake, decor, venue — and deliver a moment they'll never forget.",
+    "ctaPrimary": "Plan a Surprise",
+    "ctaSecondary": "See how it works",
+    "trustCount": "200+",
+    "trustLabel": "surprises planned this year",
+    "badgeLabel": "Next surprise in",
+    "badgeValue": "2 days",
+    "imageHint": "Replace with hero photo\n900 × 1080 px"
+  },
+  "occasions": {
+    "eyebrow": "Any reason to celebrate",
+    "title": "We plan surprises for every occasion",
+    "birthday": "Birthday",
+    "anniversary": "Anniversary",
+    "graduation": "Graduation",
+    "valentines": "Valentine's",
+    "fathersDay": "Father's Day",
+    "mothersDay": "Mother's Day",
+    "promotion": "Promotion",
+    "justBecause": "Just Because"
+  },
+  "how": {
+    "eyebrow": "Simple process",
+    "title": "How it works",
+    "step1Title": "You tell us",
+    "step1Body": "Call or WhatsApp us with who you want to surprise, the occasion, and when. Our team guides you through the rest.",
+    "step2Title": "We prepare everything",
+    "step2Body": "We source the cake, flowers, decorations, venue setup and more — you don't lift a finger. We confirm when it's all ready.",
+    "step3Title": "They're surprised",
+    "step3Body": "Your person walks into a moment they never saw coming. We handle the setup. You take all the credit."
+  },
+  "packages": {
+    "eyebrow": "Choose your package",
+    "title": "Every budget, every dream",
+    "subtitle": "All packages include our full planning and coordination service. A 25% deposit confirms your booking.",
+    "getStarted": "Get started",
+    "depositNote": "ETB {{amount}} deposit to confirm",
+    "mostPopular": "Most Popular",
+    "basic": {
+      "name": "Basic",
+      "description": "A warm, heartfelt surprise for the people who matter most.",
+      "items": [
+        "Occasion decoration setup",
+        "Custom celebration cake",
+        "Flower arrangement",
+        "Personalized message display"
+      ]
+    },
+    "standard": {
+      "name": "Standard",
+      "description": "Everything in Basic, elevated with more detail and a bigger wow.",
+      "items": [
+        "Everything in Basic",
+        "Premium decoration upgrade",
+        "Balloon installation",
+        "Photography (1 hour)",
+        "Gift wrapping & presentation"
+      ]
+    },
+    "premium": {
+      "name": "Premium",
+      "description": "A full luxury experience — the kind of surprise they talk about for years.",
+      "items": [
+        "Everything in Standard",
+        "Hotel or venue arrangement",
+        "Videography & editing",
+        "Live music or DJ",
+        "Full dinner arrangement",
+        "Dedicated Yehidat coordinator"
+      ]
+    }
+  },
+  "gallery": {
+    "eyebrow": "Real moments",
+    "title": "Surprises we've brought to life"
+  },
+  "contact": {
+    "eyebrow": "Get in touch",
+    "title": "Ready to plan something special?",
+    "subtitle": "Reach out on WhatsApp or phone — our team will walk you through everything and help you pick the perfect package.",
+    "whatsappLabel": "WhatsApp us",
+    "callLabel": "Call us directly",
+    "hoursLabel": "We're available",
+    "hoursValue": "Mon–Sat, 9am–7pm",
+    "formTitle": "Request a callback",
+    "formSubtitle": "Leave your details and we'll call you back within a few hours.",
+    "nameLabel": "Your name",
+    "namePlaceholder": "Abebe Girma",
+    "phoneLabel": "Phone number",
+    "phonePlaceholder": "+251 9XX XXX XXX",
+    "occasionLabel": "Occasion",
+    "occasionPlaceholder": "Select an occasion",
+    "dateLabel": "Surprise date (approx.)",
+    "messageLabel": "Anything you'd like us to know?",
+    "messagePlaceholder": "Tell us a little about who you're surprising…",
+    "submit": "Send request →",
+    "formNote": "We'll call you back within a few hours. No spam, ever.",
+    "successTitle": "Request received!",
+    "successBody": "We'll call you back at {{phone}} within a few hours.",
+    "submitAnother": "Submit another"
+  },
+  "footer": {
+    "brandDesc": "Addis Ababa's dedicated surprise planning team. We turn your love into moments they'll never forget.",
+    "quickLinks": "Quick links",
+    "contact": "Contact",
+    "rights": "All rights reserved."
+  }
+}
